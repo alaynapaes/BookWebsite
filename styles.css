@@ -1,0 +1,192 @@
+
+body {
+margin: 0;
+font-family: 'Cardo', serif;
+color: #4a2b2b;
+/*background-image: url('background-roses.png');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;*/
+  background:
+    url('/rose-left.jpg') left top repeat-y,
+    url('/rose-right.jpg') right top repeat-y,
+    #F0E8D5; /* background color */
+}
+
+
+
+header {
+    text-align: center;
+    padding: 10px 10px;
+
+    /* Dark rose → transparent fade */
+    background: linear-gradient(
+        rgba(120, 42, 42, 0.85),   /* deep rose red, 85% opacity */
+        rgba(120, 42, 42, 0.20),   /* fades smoothly */
+        rgba(120, 42, 42, 0)       /* fully transparent bottom */
+    );
+}
+
+header h1 {
+
+    header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+
+    color: #7a0a0a; /* gold */
+
+    /* soft gold glow */
+    text-shadow:
+        0 0 20px rgba(212, 181, 106, 0.6),
+        0 0 30px rgba(212, 181, 106, 0.4);
+}
+
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cover-container {
+    width: 280px;
+    position: relative;
+}
+
+.cover-container img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    border: 3px solid #b37a5e;
+    border-radius: 10px;
+}
+
+#backCover {
+    display: none;
+}
+
+.flip-arrow {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #7a0a0a;
+    transition: 0.3s ease;
+}
+
+.flip-arrow:hover {
+    transform: scale(1.1);
+}
+
+.book-info {
+    max-width: 450px;
+}
+
+.book-info h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #7a0a0a;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #8c4c3c;
+}
+
+.buy-btn {
+    padding: 12px 22px;
+    background: #7a0a0a;
+    color: #fceede;
+    border: 2px solid #b37a5e;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    font-family: 'Cinzel', serif;
+    margin-top: 15px;
+}
+a.buy-btn {
+    text-decoration: none;
+}
+
+/* Fancy Rose-Themed Section Boxes */
+.section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 3px solid #b37a5e;
+    border-radius: 15px;
+    background: #fff8f2;
+    position: relative;
+}
+
+.section h2 {
+    font-family: 'Cinzel', serif;
+    color: #7a0a0a;
+    margin-bottom: 15px;
+}
+
+.section:before, .section:after {
+    content: "🌹";
+    position: absolute;
+    font-size: 26px;
+    color: #b37a5e;
+}
+.section:before {
+    top: -18px; left: -18px;
+}
+.section:after {
+    bottom: -18px; right: -18px;
+}
+
+/* TABLE */
+table td:first-child {
+    color: #7a0a0a;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+table td {
+    padding-bottom: 8px;
+}
+
+/* AUTHOR CARDS */
+.author-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+author-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #b37a5e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #7a0a0a;
+    margin-top: 40px;
+    color: #f2dfd2;
+    font-family: 'Cinzel';
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 { font-size: 26px; }
+    .hero { padding: 20px; }
+    .book-info h2 { font-size: 26px; }
+}

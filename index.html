@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every Rose Has Its Thorns Book Page</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>EVERY ROSE HAS ITS THORNS</h1>
+    </header>
+
+    <section class="hero">
+        <div class="cover-container">
+            <img id="frontCover" src="front-cover.png" alt="Book Front Cover">
+            <img id="backCover" src="back-cover.png" alt="Book Back Cover">
+
+            <div class="flip-arrow" onclick="toggleCover()">➤</div>
+        </div>
+
+        <div class="book-info">
+            <h2>Every Rose Has Its Thorns</h2>
+            <p class="tagline">A Novel by Lisa Bragança & Carina Paes</p>
+            <p class="short-desc">A story of resilience, mystery, and the beautiful thorns of life.</p><br>
+            <a class="buy-btn" href="https://www.google.com" >Buy Now</a>
+        </div>
+    </section>
+
+    <section class="section book-desc">
+        <h2>About the Book</h2>
+        <p>Full description goes here...</p>
+    </section>
+
+    <section class="section details">
+        <h2>Book Details</h2>
+        <table>
+            <tr><td>Title:</td><td>Every Rose Has Its Thorns</td></tr>
+            <tr><td>Authors:</td><td>Lisa Bragança & Carina Paes</td></tr>
+            <tr><td>Genre:</td><td>Fiction</td></tr>
+        </table>
+    </section>
+
+    <section class="section authors">
+        <h2>About the Authors</h2>
+        <div class="author-card">
+            <img src="author1.jpg" alt="Author 1">
+            <p>Lisa Bragança bio...</p>
+        </div>
+        <div class="author-card">
+            <img src="author2.jpg" alt="Author 2">
+            <p>Carina Paes bio...</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 – Every Rose Has Its Thorns
+    </footer>
+
+<script>
+function toggleCover() {
+    const front = document.getElementById("frontCover");
+    const back = document.getElementById("backCover");
+
+    if (front.style.display === "none") {
+        front.style.display = "block";
+        back.style.display = "none";
+    } else {
+        front.style.display = "none";
+        back.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>
