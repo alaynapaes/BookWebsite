@@ -1,76 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Every Rose Has Its Thorns Book Page</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Every Rose Has Its Thorns</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cardo:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>EVERY ROSE HAS ITS THORNS</h1>
-    </header>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="glow-title">Every Rose Has Its Thorns</h1>
+      <p class="subtitle">A novel by Lisa Bragança &amp; Carina Paes</p>
+    </div>
+  </header>
 
-    <section class="hero">
-        <div class="cover-container">
-            <img id="frontCover" src="front-cover.png" alt="Book Front Cover">
-            <img id="backCover" src="back-cover.png" alt="Book Back Cover">
+  <main>
+    <section class="book-hero">
+      <div class="hero-inner">
+        <div class="book-card">
+          <div class="book" id="flipBook">
+            <img src="front-cover.png" class="book-face front book-img">
+            <img src="back-cover.png" class="book-face back book-img">
+          </div>
 
-            <div class="flip-arrow" onclick="toggleCover()">➤</div>
+          <div class="book-actions">
+            <button class="flip-btn" onclick="flipBook()">Flip Book</button>
+          </div>
         </div>
 
         <div class="book-info">
-            <h2>Every Rose Has Its Thorns</h2>
-            <p class="tagline">A Novel by Lisa Bragança & Carina Paes</p>
-            <p class="short-desc">A story of resilience, mystery, and the beautiful thorns of life.</p><br>
-            <a class="buy-btn" href="https://www.google.com" >Buy Now</a>
+          <h2 class="book-title">A gripping mystery dripping with suspense and sinister secrets.</h2>
+          <p class="lead">“To Lady Everett!” Glasses clinked in her honour. The toast rang clear, but beneath the crystal chimes and pleasant smiles, shadows loomed. Whispers of contempt echoed through the corridors, past the tapestry‑adorned walls of the mansion. The very next morning, Eleanor Everett's body lay lifeless in her study — in a pool of blood…</p>
+        <p class="price">
+        <span style="padding: 2px 0; color: #be3734; font-size: 26px; font-weight: bold; margin-left: 10px;"> ₹349 </span>
+        <span style="padding-left:10px; text-decoration: line-through; color: #777;">₹699</span>
+        <span style="color: #777;">(50% off)</span>
+        </p>
+          <div class="inline-buttons">
+            <a class="buy-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScGDPwdaIHdwaYNsryZCmdnG56HjoZFTnlHiobXOv-JHIKwQw/viewform" target="_blank">Buy Now</a>
+            <a class="preview-btn" href="Every-Rose-Has-Its-Thorns.pdf" target="_blank">Preview Sample Pages</a>
         </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section book-desc">
-        <h2>About the Book</h2>
-        <p>Full description goes here...</p>
-    </section>
+    <section class="content-section fade-in">
+      <div class="container">
+        <h3 class="gold-heading">About the Book</h3>
+        <p class="text">Set in the charming English countryside where gently rolling hills and serene meadows conceal secrets and laughter hides betrayals, this thrilling plot born from the vivid imaginations of two teenage authors from Goa, takes you on a roller-coaster filled with mystery, suspense, romance and drama leaving you guessing every step of the way. The story follows a series of mysterious events that test trust, reveal hidden motives and expose the thorns beneath the beauty of friendship and truth. <br><br> Written in vivid, cinematic language, Every Rose Has Its Thorns appeals to fans of mystery thrillers and young-adult fiction. Its relatable characters, emotional undertones, and cleverly layered twists make it perfect for readers seeking a compelling yet heartfelt narrative. This is really an impressive debut from two promising young storytellers.</p>
 
-    <section class="section details">
-        <h2>Book Details</h2>
-        <table>
-            <tr><td>Title:</td><td>Every Rose Has Its Thorns</td></tr>
-            <tr><td>Authors:</td><td>Lisa Bragança & Carina Paes</td></tr>
-            <tr><td>Genre:</td><td>Fiction</td></tr>
+        <h3 class="gold-heading">Book Details</h3>
+        <table class="details">
+          <tr><td>Title:</td><td>Every Rose Has Its Thorns</td></tr>
+          <tr><td>Authors:</td><td>Lisa Bragança &amp; Carina Paes</td></tr>
+          <tr><td>Genre:</td><td>Fiction / Mystery / Thriller</td></tr>
+          <tr><td>Pages:</td><td>335</td></tr>
+          <tr><td>ISBN:</td><td>9789349653924</td></tr>
+          <tr><td>HSN:</td><td>490110</td></tr>
         </table>
-    </section>
 
-    <section class="section authors">
-        <h2>About the Authors</h2>
-        <div class="author-card">
-            <img src="author1.jpg" alt="Author 1">
-            <p>Lisa Bragança bio...</p>
+        <div class="author-block">
+          <h3 class="gold-heading">About the Authors</h3>
+          <div class="author-card">
+            <img src="CarinaLisaPic.jpg" alt="Authors" class="author-photo">
+            <p class="text">Lisa Bragança and Carina Paes are two young, fun-loving teenagers from the picturesque state of Goa. Surrounded by serene beaches and lush green hills, they developed a love for mystery novels that soon turned into a passion for storytelling. Between schoolwork and seaside sunsets, they co-wrote Every Rose Has Its Thorns—a gripping tale born from imagination, curiosity, and friendship. Their fresh narrative voice captures both the innocence of youth and the thrill of suspense, inspiring readers to chase creativity fearlessly.</p>
+          </div>
         </div>
-        <div class="author-card">
-            <img src="author2.jpg" alt="Author 2">
-            <p>Carina Paes bio...</p>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        © 2025 – Every Rose Has Its Thorns
-    </footer>
+  <footer class="site-footer">
+    <p>© 2025 — Every Rose Has Its Thorns</p>
+  </footer>
+
+  <div id="modal" onclick="hideModal()"><img id="modalImg"></div>
 
 <script>
-function toggleCover() {
-    const front = document.getElementById("frontCover");
-    const back = document.getElementById("backCover");
+  function flipBook(){
+    document.getElementById('flipBook').classList.toggle('flipped');
+  }
 
-    if (front.style.display === "none") {
-        front.style.display = "block";
-        back.style.display = "none";
-    } else {
-        front.style.display = "none";
-        back.style.display = "block";
-    }
-}
+  // simple fade-in observer
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+    },{threshold:0.15});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  });
 </script>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox-overlay">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="Zoomed Image">
+</div>
+<script>
+document.querySelectorAll(".book-img").forEach(img => {
+    img.addEventListener("click", () => {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox-overlay").classList.add("active");
+    });
+});
+
+document.querySelector(".close-lightbox").addEventListener("click", () => {
+    document.getElementById("lightbox-overlay").classList.remove("active");
+});
+
+document.getElementById("lightbox-overlay").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) {
+        document.getElementById("lightbox-overlay").classList.remove("active");
+    }
+});
+</script>
+<script>
+document.querySelectorAll(".book-img").forEach(img => {
+    img.addEventListener("click", () => {
+        document.getElementById("lightbox-img").src = img.src;
+        document.getElementById("lightbox-overlay").classList.add("active");
+    });
+});
+
+document.querySelector(".close-lightbox").addEventListener("click", () => {
+    document.getElementById("lightbox-overlay").classList.remove("active");
+});
+
+document.getElementById("lightbox-overlay").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) {
+        document.getElementById("lightbox-overlay").classList.remove("active");
+    }
+});
+</script>
+
 </body>
 </html>
