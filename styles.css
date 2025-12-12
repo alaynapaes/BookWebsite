@@ -108,7 +108,7 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
 }
 
 /* RESPONSIVE */
-@media(max-width:880px){ .hero-inner{ flex-direction:column-reverse; } .book-info{text-align:center;} }
+@media(max-width:880px){ .hero-inner{ flex-direction:column; } .book-info{text-align:center;} }
 @media(max-width:600px){ .author-card{ flex-direction:column; text-align:center; }
 .author-photo{ margin:auto; }
 /* Disable sticky header on mobile */
