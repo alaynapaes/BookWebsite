@@ -1,12 +1,17 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({message: 'Method not allowed'});
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const {name, rating, message} = req.body;
+  console.log('BODY:', req.body); // 👈 debugging
+
+  const { name, rating, message } = req.body || {};
 
   if (!name || !rating || !message) {
-    return res.status(400).json({message: 'Missing fields'});
+    return res.status(400).json({
+      message: 'Missing fields',
+      received: req.body
+    });
   }
 
   const doc = {
@@ -22,17 +27,17 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.SANITY_TOKEN}`
+        Authorization: `Bearer ${process.env.SANITY_TOKEN}`
       },
       body: JSON.stringify({
-        mutations: [{create: doc}]
+        mutations: [{ create: doc }]
       })
     }
   );
 
   if (!response.ok) {
-    return res.status(500).json({message: 'Failed to submit review'});
+    return res.status(500).json({ message: 'Failed to submit review' });
   }
 
-  res.status(200).json({message: 'Review submitted for approval'});
+  return res.status(200).json({ message: 'Review submitted for approval' });
 }

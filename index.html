@@ -177,13 +177,17 @@ fetch(`https://${PROJECT_ID}.api.sanity.io/v2023-10-01/data/query/${DATASET}?que
 document.getElementById('reviewForm').addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const name = document.getElementById('name').value;
+  const rating = document.getElementById('rating').value;
+  const message = document.getElementById('message').value;
+
   const res = await fetch('/api/submit-review', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
-      name: name.value,
-      rating: rating.value,
-      message: message.value
+     name,
+      rating,
+      message
     })
   });
 
