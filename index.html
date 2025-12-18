@@ -73,7 +73,19 @@
 <form id="reviewForm">
   <h3 style="text-align: center;">Submit Your Review</h3>
   <input type="text" id="name" placeholder="Your name" required />
-  <input type="number" id="rating" placeholder="Rating" min="1" max="5" required />
+
+  
+  <div class="star-rating">
+  <input type="hidden" id="rating" required />
+
+  <span data-value="1">★</span>
+  <span data-value="2">★</span>
+  <span data-value="3">★</span>
+  <span data-value="4">★</span>
+  <span data-value="5">★</span>
+</div>
+</div>
+
   <textarea id="message" placeholder="Your review" required></textarea>
   <input type="hidden" id="status" name="status" value="pending" />
   <button type="submit">Submit Review</button>
@@ -203,6 +215,34 @@ document.getElementById('reviewForm').addEventListener('submit', async (e) => {
 
   const data = await res.json();
   document.getElementById('status').innerText = data.message;
+});
+</script>
+<script>
+const stars = document.querySelectorAll('.star-rating span');
+const ratingInput = document.getElementById('rating');
+
+stars.forEach((star, index) => {
+  star.addEventListener('click', () => {
+    const value = star.dataset.value;
+    ratingInput.value = value;
+
+    stars.forEach((s, i) => {
+      s.classList.toggle('active', i < value);
+    });
+  });
+
+  // Hover effect
+  star.addEventListener('mouseenter', () => {
+    stars.forEach((s, i) => {
+      s.classList.toggle('active', i <= index);
+    });
+  });
+
+  star.addEventListener('mouseleave', () => {
+    stars.forEach((s, i) => {
+      s.classList.toggle('active', i < ratingInput.value);
+    });
+  });
 });
 </script>
 

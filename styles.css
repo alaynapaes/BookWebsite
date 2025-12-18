@@ -291,3 +291,30 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
     font-size: 22px;
   }
 }
+
+/* =========================
+   STAR RATING (GOOGLE-LIKE)
+   ========================= */
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+  font-size: 32px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.star-rating span {
+  color: rgba(212,175,55,0.25); /* outline look */
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star-rating span:hover {
+  transform: scale(1.15);
+}
+
+/* Filled stars */
+.star-rating span.active {
+  color: var(--gold2);
+}
+
