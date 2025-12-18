@@ -91,7 +91,7 @@
   <button type="submit">Submit Review</button>
 </form>
 
-<p id="status"></p>
+<p id="status1"></p>
 
 
     <section id="reviews">
@@ -214,8 +214,8 @@ document.getElementById('reviewForm').addEventListener('submit', async (e) => {
   });
 
   const data = await res.json();
-  console.log("data.message: " + data.message);
-  document.getElementById('status').innerText = "Static text";
+  console.log("data.message123: " + data.message);
+  document.getElementById('status1').innerText = "Static text";
 });
 </script>
 <script>
