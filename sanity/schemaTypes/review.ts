@@ -22,6 +22,20 @@ export default defineType({
       title: 'Review',
       type: 'text',
       validation: Rule => Rule.required()
+    }),
+    defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Pending', value: 'pending'},
+          {title: 'Approved', value: 'approved'},
+          {title: 'Rejected', value: 'rejected'},
+        ],
+        layout: 'radio', // or remove if you prefer dropdown
+      },
+      initialValue: 'pending',
     })
   ]
 })
