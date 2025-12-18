@@ -214,7 +214,7 @@ document.getElementById('reviewForm').addEventListener('submit', async (e) => {
   });
 
   const data = await res.json();
-  console.log("data: " + data);
+  console.log("data: " + data.message);
   document.getElementById('status').innerText = data.message;
 });
 </script>
