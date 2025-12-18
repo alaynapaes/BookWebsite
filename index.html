@@ -215,7 +215,7 @@ document.getElementById('reviewForm').addEventListener('submit', async (e) => {
 
   const data = await res.json();
   console.log("data.message123: " + data.message);
-  document.getElementById('status1').innerText = data.message;
+  alert("Your review is recorded. Comments are subject to approval.")
 });
 </script>
 <script>
