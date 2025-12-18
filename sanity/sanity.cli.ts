@@ -5,11 +5,5 @@ export default defineCliConfig({
     projectId: 'fcd3pz2x',
     dataset: 'production'
   },
-  deployment: {
-    /**
-     * Enable auto-updates for studios.
-     * Learn more at https://www.sanity.io/docs/cli#auto-updates
-     */
-    autoUpdates: true,
-  }
+  studioHost: 'book-reviews'
 })
