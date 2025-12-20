@@ -154,7 +154,7 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
    REVIEW FORM
    =========================== */
 
-#reviewForm {
+#review {
   max-width: 520px;
   margin: 0 auto 50px;
   padding: 28px;
@@ -168,8 +168,8 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
   box-shadow: 0 25px 60px rgba(0,0,0,0.5);
 }
 
-#reviewForm input,
-#reviewForm textarea {
+#review input,
+#review textarea {
   width: 100%;
   margin-bottom: 14px;
   padding: 12px 14px;
@@ -182,24 +182,24 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
   transition: border 0.25s ease, box-shadow 0.25s ease;
 }
 
-#reviewForm input::placeholder,
-#reviewForm textarea::placeholder {
+#review input::placeholder,
+#review textarea::placeholder {
   color: #b7aaa3;
 }
 
-#reviewForm input:focus,
-#reviewForm textarea:focus {
+#review input:focus,
+#review textarea:focus {
   border-color: var(--gold1);
   box-shadow: 0 0 0 2px rgba(212,175,55,0.15);
 }
 
-#reviewForm textarea {
+#review textarea {
   min-height: 110px;
   resize: vertical;
 }
 
 /* Submit button */
-#reviewForm button {
+#review button {
   width: 100%;
   margin-top: 6px;
   padding: 12px;
@@ -213,7 +213,7 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#reviewForm button:hover {
+#review button:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 40px rgba(255,180,20,0.25);
 }
@@ -283,7 +283,7 @@ body{ margin:0; font-family:'Montserrat', system-ui, -apple-system, 'Segoe UI', 
    =========================== */
 
 @media (max-width: 600px) {
-  #reviewForm {
+  #review {
     padding: 22px;
   }
 

@@ -70,7 +70,7 @@
         </div>
       </div>
     </section>
-<form id="reviewForm">
+<form id="review">
   <h3 style="text-align: center;">Submit Your Review</h3>
   <input type="text" id="name" placeholder="Your name" required />
 
@@ -196,7 +196,7 @@ fetch(`https://${PROJECT_ID}.api.sanity.io/v2023-10-01/data/query/${DATASET}?que
 
 
 <script>
-document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+document.getElementById('review').addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = document.getElementById('name').value;
