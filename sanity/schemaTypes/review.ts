@@ -35,7 +35,7 @@ export default defineType({
         ],
         layout: 'radio', // or remove if you prefer dropdown
       },
-      initialValue: 'pending',
+      initialValue: 'approved',
     })
   ]
 })
