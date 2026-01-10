@@ -10,7 +10,8 @@ export default async function handler(req, res) {
   if (!name || !rating || !message) {
     return res.status(400).json({
       message: 'Missing fields',
-      received: req.body
+      received: req.body,
+      status: 'approved'
     });
   }
 
