@@ -10,8 +10,7 @@ export default async function handler(req, res) {
   if (!name || !rating || !message) {
     return res.status(400).json({
       message: 'Missing fields',
-      received: req.body,
-      status: 'approved'
+      received: req.body
     });
   }
 
@@ -19,7 +18,8 @@ export default async function handler(req, res) {
     _type: 'review',
     name,
     rating: Number(rating),
-    message
+    message,
+    status: 'approved'
   };
 
   const response = await fetch(
