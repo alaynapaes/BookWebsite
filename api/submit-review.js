@@ -7,10 +7,21 @@ export default async function handler(req, res) {
 
   const { name, rating, message } = req.body || {};
 
-  if (!name || !rating || !message) {
+  if (!name) {
     return res.status(400).json({
-      message: 'Missing fields',
-      received: req.body
+      message: 'Name is required'
+    });
+  }
+
+  if (rating === undefined || rating === null || rating === '') {
+    return res.status(400).json({
+      message: 'Rating is required'
+    });
+  }
+
+  if (!message) {
+    return res.status(400).json({
+      message: 'Message is required'
     });
   }
 
