@@ -202,20 +202,41 @@ document.getElementById('review').addEventListener('submit', async (e) => {
   const name = document.getElementById('name').value;
   const rating = document.getElementById('rating').value;
   const message = document.getElementById('message').value;
+  const status = document.getElementById('status1');
 
-  const res = await fetch('/api/submit-review', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({
-     name,
-      rating,
-      message
-    })
-  });
+  status.textContent = '';
+  if (rating === '' || Number(rating) === 0) {
+    status.textContent = 'Rating is required';
+    return;
+  }
 
-  const data = await res.json();
-  console.log("data.message123: " + data.message);
-  alert("Your review is recorded. All comments are moderated.")
+  const numericRating = Number(rating);
+  if (!Number.isInteger(numericRating) || numericRating < 1 || numericRating > 5) {
+    status.textContent = 'Rating must be between 1 and 5';
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/submit-review', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        name,
+        rating: numericRating,
+        message
+      })
+    });
+
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      status.textContent = data.message || 'Failed to submit review';
+      return;
+    }
+
+    status.textContent = data.message || 'Review submitted for approval';
+  } catch {
+    status.textContent = 'Failed to submit review';
+  }
 });
 </script>
 <script>
