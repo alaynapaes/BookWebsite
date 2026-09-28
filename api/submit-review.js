@@ -3,8 +3,6 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  console.log('BODY:', req.body); // 👈 debugging
-
   const { name, rating, message } = req.body || {};
 
   if (!name) {
@@ -13,7 +11,14 @@ export default async function handler(req, res) {
     });
   }
 
-  if (rating === undefined || rating === null || rating === '') {
+  if (rating === undefined || rating === null || rating === '' || Number(rating) === 0) {
+    return res.status(400).json({
+      message: 'Rating is required'
+    });
+  }
+
+  const numericRating = Number(rating);
+  if (!Number.isInteger(numericRating) || numericRating < 1 || numericRating > 5) {
     return res.status(400).json({
       message: 'Rating is required'
     });
@@ -28,7 +33,7 @@ export default async function handler(req, res) {
   const doc = {
     _type: 'review',
     name,
-    rating: Number(rating),
+    rating: numericRating,
     message,
     status: 'approved'
   };
